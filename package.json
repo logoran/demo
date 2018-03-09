@@ -1,11 +1,11 @@
 {
   "name": "logoran-demo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
-    "start":    "./node_modules/.bin/nodemon bin/run",
-    "dev":      "./node_modules/.bin/runkoa bin/www",
-    "prd":      "pm2 start bin/run ",
-    "test":     "./node_modules/.bin/mocha -u bdd"
+    "start": "./node_modules/.bin/nodemon bin/run",
+    "dev": "./node_modules/.bin/runkoa bin/www",
+    "prd": "pm2 start bin/run ",
+    "test": "./node_modules/.bin/mocha -u bdd"
   },
   "dependencies": {
     "co": "^4.6.0",
