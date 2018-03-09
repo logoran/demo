@@ -1,6 +1,6 @@
 # logoran-demo
 
-[![npm version](https://badge.fury.io/js/koa2-demo.svg)](http://badge.fury.io/js/runkoa)
+[![npm version](https://badge.fury.io/js/koa2-demo.svg)](http://badge.fury.io/js/logoran-run)
 [![Build](https://travis-ci.org/17koa/koa2-demo.svg?branch=master)](https://travis-ci.org/17koa/koa2-demo)
 
 
@@ -10,7 +10,7 @@
 ## Tech Stack
 
 - Logoran
-- nodemon + runkoa（支持async/await，且不需关心babel）
+- nodemon + logoran-run（支持async/await，且不需关心babel）
 - pm2 for deployment（服务器部署）
 - express-style middlewares
   - logoran-router
@@ -125,8 +125,8 @@ app.use(views(__dirname + '/views-ejs', {
 │   ├── logoran
 │   ├── logoran-logger
 │   ├── logoran-router
-│   ├── nodemon
-│   └── runkoa
+│   ├── logoran-run
+│   └── nodemon
 ├── package.json
 ├── public
 │   ├── images
@@ -148,7 +148,7 @@ app.use(views(__dirname + '/views-ejs', {
 
 说明
 
-- bin/run(runkoa执行bin/www)
+- bin/run(logoran-run执行bin/www)
 - bin/www是常规logoran启动文件，和express的一样
 - views是放默认的jade文件
 - views-ejs是放ejs文件

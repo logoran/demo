@@ -20,7 +20,7 @@
     "logoran": "^1.0.1",
     "logoran-logger": "^1.0.0",
     "logoran-router": "^1.0.2",
-    "runkoa": "^1.5.2"
+    "logoran-run": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "^2.4.5",
