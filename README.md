@@ -1,19 +1,19 @@
-# koa2-demo
+# logoran-demo
 
 [![npm version](https://badge.fury.io/js/koa2-demo.svg)](http://badge.fury.io/js/runkoa)
 [![Build](https://travis-ci.org/17koa/koa2-demo.svg?branch=master)](https://travis-ci.org/17koa/koa2-demo)
 
 
 
-这个项目是express风格的最新的Koa 2项目的示例，已集成到[koa-generator](https://github.com/17koa/koa-generator)里，算是集成一些所谓的最佳实践吧
+这个项目是express风格的最新的Logoran项目的示例，已集成到[logoran-generator](https://github.com/logoran/generator)里，算是集成一些所谓的最佳实践吧
 
 ## Tech Stack
 
-- Koa 2
+- Logoran
 - nodemon + runkoa（支持async/await，且不需关心babel）
 - pm2 for deployment（服务器部署）
 - express-style middlewares
-  - koa-router
+  - logoran-router
   - koa-views
   - koa-static
   - koa-bodyparser
@@ -21,8 +21,8 @@
 ## Getting Start
 
 ```
-git clone https://github.com/17koa/koa2-demo.git
-cd koa2-demo
+git clone https://github.com/logoran/demo.git
+cd logoran-demo
 npm install
 npm start
 ```
@@ -51,15 +51,15 @@ npm start
  #npm run pm2
  pm2 start bin/run 
 ```
-## 支持koa2的3种中间件写法
+## 支持koa的3种中间件写法
 
-Koa 2是一个 middleware framework, 它提供了 3 种不同类型的中间件写法
+Logoran是一个 middleware framework, 它提供了 3 种不同类型的中间件写法
 
 - common function
 - async function（新增）
 - generatorFunction
 
-详见[koa 2的文档](https://github.com/koajs/koa/blob/v2.x/Readme.md)
+详见[koa的文档](https://github.com/koajs/koa/blob/v2.x/Readme.md)
 
 ## 支持view层多种模板
 
@@ -69,7 +69,7 @@ Koa 2是一个 middleware framework, 它提供了 3 种不同类型的中间件�
 [List of supported engines](https://github.com/tj/consolidate.js#supported-template-engines)
 
 
-需要注意的koa2使用的koa-views也是下一版本的koa-views@next，当前项目已经处理过了，不需要再处理的，哈哈
+需要注意的koa使用的koa-views也是下一版本的koa-views@next，当前项目已经处理过了，不需要再处理的，哈哈
 
 
 ### jade 
@@ -103,7 +103,7 @@ app.use(views(__dirname + '/views-ejs', {
 ## 目录结构
 
 ```
-➜  koa2-demo git:(master) tree . -L 2
+➜  logoran-demo git:(master) tree . -L 2
 .
 ├── LICENSE
 ├── README.md
@@ -116,15 +116,15 @@ app.use(views(__dirname + '/views-ejs', {
 │   ├── debug
 │   ├── ejs
 │   ├── jade
-│   ├── koa
 │   ├── koa-bodyparser
 │   ├── koa-convert
 │   ├── koa-json
-│   ├── koa-logger
 │   ├── koa-onerror
-│   ├── koa-router
 │   ├── koa-static
 │   ├── koa-views
+│   ├── logoran
+│   ├── logoran-logger
+│   ├── logoran-router
 │   ├── nodemon
 │   └── runkoa
 ├── package.json
@@ -149,13 +149,13 @@ app.use(views(__dirname + '/views-ejs', {
 说明
 
 - bin/run(runkoa执行bin/www)
-- bin/www是常规koa启动文件，和express的一样
+- bin/www是常规logoran启动文件，和express的一样
 - views是放默认的jade文件
 - views-ejs是放ejs文件
 
 
 ## 推荐
 
-如果你喜欢express风格的生成，推荐[koa-generator](https://github.com/17koa/koa-generator)
+如果你喜欢express风格的生成，推荐[logoran-generator](https://github.com/logoran/generator)
 
-如果你喜欢babel + koa2可以参考[Minimal koa v2 boilerplate.](https://github.com/geekplux/koa2-boilerplate)
+如果你喜欢babel + logoran可以参考[Minimal koa v2 boilerplate.](https://github.com/geekplux/koa2-boilerplate)

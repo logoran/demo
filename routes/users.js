@@ -1,4 +1,4 @@
-var router = require('koa-router')();
+var router = require('logoran-router')();
 
 router.get('/', function (ctx, next) {
   ctx.body = 'this a users response!';

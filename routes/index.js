@@ -1,8 +1,8 @@
-var router = require('koa-router')();
+var router = require('logoran-router')();
 
 router.get('/', async function (ctx, next) {
   ctx.state = {
-    title: 'koa2 title'
+    title: 'logoran title'
   };
 
   await ctx.render('index', {
