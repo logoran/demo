@@ -1,6 +1,6 @@
 {
   "name": "logoran-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "NODE_ENV=development nodemon .",
     "debug": "node --inspect-brk .",
@@ -34,6 +34,7 @@
   "jest": {
     "testMatch": [
       "**/test/*.js"
-    ]
+    ],
+    "testEnvironment": "node"
   }
 }
