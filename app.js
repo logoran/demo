@@ -8,9 +8,10 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('logoran-logger');
-
 const index = require('./routes/index');
 const users = require('./routes/users');
+const config = require('config');
+require('dotenv').config();
 
 // middlewares
 app.use(convert(bodyparser));
@@ -25,7 +26,6 @@ app.use(views(__dirname + '/views', {
 // app.use(views(__dirname + '/views-ejs', {
 //   extension: 'ejs'
 // }));
-
 
 // logger
 app.use(async (ctx, next) => {
@@ -46,5 +46,7 @@ app.on('error', function(err, ctx){
   log.error('server error', err, ctx);
 });
 
+let port = process.env.port || config.get('main.server.port') || '3000';
+app.listen(port);
 
 module.exports = app;
