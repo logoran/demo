@@ -1,7 +1,8 @@
 {
   "name": "logoran-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
+    "start": "node .",
     "dev": "NODE_ENV=development nodemon .",
     "debug": "node --inspect-brk .",
     "test": "NODE_ENV=test jest --forceExit --coverage",
