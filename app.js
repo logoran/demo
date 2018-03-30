@@ -1,24 +1,21 @@
 const Logoran = require('logoran');
-const app = new Logoran();
 const router = require('logoran-router')();
 const views = require('koa-views');
-const co = require('co');
-const convert = require('koa-convert');
-const json = require('koa-json');
 const onerror = require('koa-onerror');
-const bodyparser = require('koa-bodyparser')();
+const body = require('koa-body')();
 const logger = require('logoran-logger');
+const serve = require('koa-static');
+
+const app = new Logoran();
 const index = require('./routes/index');
 const users = require('./routes/users');
 const config = require('config');
-
 require('dotenv').config();
 
 // middlewares
-app.use(convert(bodyparser));
-app.use(convert(json()));
-app.use(convert(logger()));
-app.use(convert(require('koa-static')(__dirname + '/public')));
+app.use(body);
+app.use(logger());
+app.use(serve(__dirname + '/public'));
 
 app.use(views(__dirname + '/views', {
   extension: 'jade'
