@@ -1,7 +1,7 @@
 # logoran-demo
 
-[![npm version](https://badge.fury.io/js/koa2-demo.svg)](http://badge.fury.io/js/logoran-run)
-[![Build](https://travis-ci.org/17koa/koa2-demo.svg?branch=master)](https://travis-ci.org/17koa/koa2-demo)
+[![npm version](https://badge.fury.io/js/logoran-demo.svg)](http://badge.fury.io/js/logoran-demo)
+[![Build](https://travis-ci.org/logoran/logoran-demo.svg?branch=master)](https://travis-ci.org/logoran/logoran-demo)
 
 
 
@@ -10,13 +10,13 @@
 ## Tech Stack
 
 - Logoran
-- nodemon + logoran-run（支持async/await，且不需关心babel）
+- nodemon（支持async/await）
 - pm2 for deployment（服务器部署）
 - express-style middlewares
   - logoran-router
   - koa-views
   - koa-static
-  - koa-bodyparser
+  - koa-body
 
 ## Getting Start
 
@@ -116,9 +116,7 @@ app.use(views(__dirname + '/views-ejs', {
 │   ├── debug
 │   ├── ejs
 │   ├── jade
-│   ├── koa-bodyparser
-│   ├── koa-convert
-│   ├── koa-json
+│   ├── koa-body
 │   ├── koa-onerror
 │   ├── koa-static
 │   ├── koa-views
