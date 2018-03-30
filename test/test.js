@@ -1,5 +1,4 @@
 const supertest = require('supertest');
-const should = require('should');
 
 const app = require('../app');
 const server = app.listen();
