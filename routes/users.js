@@ -1,4 +1,4 @@
-var router = require('logoran-router')();
+const router = require('logoran-router')();
 
 router.get('/', function (ctx, next) {
   ctx.body = 'this a users response!';

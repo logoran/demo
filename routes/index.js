@@ -1,4 +1,4 @@
-var router = require('logoran-router')();
+const router = require('logoran-router')();
 
 router.get('/', async function (ctx, next) {
   ctx.state = {
