@@ -11,6 +11,7 @@ const logger = require('logoran-logger');
 const index = require('./routes/index');
 const users = require('./routes/users');
 const config = require('config');
+
 require('dotenv').config();
 
 // middlewares
