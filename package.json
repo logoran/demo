@@ -6,21 +6,19 @@
     "dev": "NODE_ENV=development nodemon .",
     "debug": "node --inspect-brk .",
     "test": "NODE_ENV=test jest --forceExit --coverage",
-    "prd": "NODE_ENV=production pm2 ."
+    "prd": "NODE_ENV=production pm2 start ."
   },
   "main": "app.js",
   "dependencies": {
-    "co": "^4.6.0",
     "config": "^1.30.0",
-    "debug": "^2.2.0",
+    "debug": "^2.6.3",
     "dotenv": "^5.0.1",
     "jade": "~1.11.0",
     "koa-body": "^2.5.0",
-    "koa-onerror": "^1.2.1",
-    "koa-static": "^1.5.2",
-    "koa-views": "^5.0.1",
+    "koa-static": "^4.0.2",
+    "koa-views": "^5.2.1",
     "logoran": "^1.0.1",
-    "logoran-logger": "^1.0.0",
+    "logoran-logger": "^1.0.1",
     "logoran-router": "^1.0.2"
   },
   "devDependencies": {

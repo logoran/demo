@@ -1,7 +1,6 @@
 const Logoran = require('logoran');
 const router = require('logoran-router')();
 const views = require('koa-views');
-const onerror = require('koa-onerror');
 const body = require('koa-body')();
 const logger = require('logoran-logger');
 const serve = require('koa-static');
@@ -25,14 +24,6 @@ app.use(views(__dirname + '/views', {
 //   extension: 'ejs'
 // }));
 
-// logger
-app.use(async (ctx, next) => {
-  const start = new Date();
-  await next();
-  const ms = new Date() - start;
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-});
-
 router.use('/', index.routes(), index.allowedMethods());
 router.use('/users', users.routes(), users.allowedMethods());
 
@@ -40,11 +31,10 @@ app.use(router.routes(), router.allowedMethods());
 // response
 
 app.on('error', function(err, ctx){
-  console.log(err)
-  log.error('server error', err, ctx);
+  console.log(err);
 });
 
-let port = process.env.port || config.get('main.server.port') || '3000';
+const port = process.env.port || config.get('main.server.port') || '3000';
 app.listen(port);
 
 module.exports = app;
