@@ -34,7 +34,7 @@ app.on('error', function(err, ctx){
   console.log(err);
 });
 
-const port = process.env.port || config.get('main.server.port') || '3000';
+const port = process.env.PORT || config.get('main.server.port') || '3000';
 app.listen(port);
 
 module.exports = app;
